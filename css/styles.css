@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Discover Sans';
+    src: url('path/to/discover-sans-regular.woff2') format('woff2'),
+         url('path/to/discover-sans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Discover Sans';
+    src: url('path/to/discover-sans-bold.woff2') format('woff2'),
+         url('path/to/discover-sans-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Discover Sans', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.ad-container {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    width: 600px;
+    height: 500px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 60px;
+    color: #23233f;
+    font-weight: 450;
+    margin: 0;
+    letter-spacing: 7px;
+    
+}
+
+h1 sup {
+    font-size: 16px;
+    vertical-align: super;
+}
+
+h2 {
+    font-size: 28px;
+    color: #000;
+    margin: 10px 0 20px 0;
+}
+
+p {
+    color: #333;
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 0px;
+}
+
+p span {
+    color: #ff6600;
+
+    font-size: 38px;
+    letter-spacing: 0px;
+}
+
+button {
+    background-color: #ec6b29;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 30px;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 191px;
+    height: 56px;
+    transition: transform 0.3s ease; 
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.cashback {
+    display: inline-block;
+    animation: scaleUp 1s ease-in-out infinite alternate;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+.button-glare {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 100%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+}
+
+.debit-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 625px;
+    height: auto;
+    transform: rotate(0deg);
+}
+
+.footer-text {
+    font-size: 17px;
+    line-height: 17px;
+    color: #23233f;
+    font-weight: 250;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: calc(100% - 80px);
+    text-align: left;
+    letter-spacing: -0.5px;
+}
