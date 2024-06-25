@@ -40,10 +40,10 @@ body {
 h1 {
     font-size: 60px;
     color: #23233f;
-    font-weight: 450;
+    font-weight: 535;
     margin: 0;
-    letter-spacing: 7px;
-    
+    letter-spacing: 5px;
+    font-stretch: expanded;
 }
 
 h1 sup {
