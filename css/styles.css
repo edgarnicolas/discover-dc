@@ -119,9 +119,8 @@ button:hover {
 
 .debit-card {
     position: absolute;
-    bottom: 0;
+    bottom: -300px; /* Start below the container */
     right: 0;
-    width: 625px;
     height: auto;
     transform: rotate(0deg);
 }
