@@ -93,11 +93,12 @@ button {
     display: inline-block;
     width: 191px;
     height: 56px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.5); /* Increase scale value for a more pronounced effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for a lifted effect */
 }
 
 .cashback {
@@ -126,12 +127,11 @@ button:hover {
 
 .debit-card {
     position: absolute;
-    bottom: -300px; /* Start from below the container */
-    right: -300px; /* Start from right of the container */
+    bottom: -300px; 
+    right: -300px; 
     height: auto;
-    transform: rotate(45deg); /* Start with a 45 degree rotation */
+    transform: rotate(45deg); 
 }
-
 
 .footer-text {
     font-size: 17px;
@@ -144,4 +144,16 @@ button:hover {
     width: calc(100% - 80px);
     text-align: left;
     letter-spacing: -0.5px;
+}
+
+
+.ad-content {
+    opacity: 0;
+    transform: translateX(100px); 
+}
+
+.ad-content.appear {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
 }
