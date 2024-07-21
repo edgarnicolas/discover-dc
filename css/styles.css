@@ -97,8 +97,8 @@ button {
 }
 
 button:hover {
-    transform: scale(1.5); /* Increase scale value for a more pronounced effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for a lifted effect */
+    transform: scale(1.5); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .cashback {
