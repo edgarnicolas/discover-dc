@@ -126,11 +126,12 @@ button:hover {
 
 .debit-card {
     position: absolute;
-    bottom: -300px; /* Start below the container */
-    right: 0;
+    bottom: -300px; /* Start from below the container */
+    right: -300px; /* Start from right of the container */
     height: auto;
-    transform: rotate(0deg);
+    transform: rotate(45deg); /* Start with a 45 degree rotation */
 }
+
 
 .footer-text {
     font-size: 17px;

@@ -16,14 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     ease: "power1.inOut",
                 });
                 gsap.to(".debit-card", {
-                    duration: 0.5,
-                    y: '-300px',
+                    duration: 1,  
+                    bottom: '0px', 
+                    right: '0px', 
+                    rotation: 0,  
                     ease: "power2.out",
-                    delay: 0.50,
+                    delay: 0.01, 
                     onComplete: function() {
                         gsap.to(".debit-card", {
-                            duration: 0.3,
-                            scale: 1.1, // Scale up the card a bit
+                            duration: 0.1,
+                            scale: 1.01, // Scale up the card a bit
                             ease: "power1.inOut",
                             onComplete: function() {
                                 gsap.to(".debit-card", {
