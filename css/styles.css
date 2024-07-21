@@ -26,12 +26,12 @@ body {
 
 .ad-container {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
     position: relative;
-    width: 600px;
-    height: 500px;
+    width: 300px;
+    height: 250px;
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
@@ -39,43 +39,37 @@ body {
 
 .arcs {
     position: absolute;
-    top: 250px;
-    left: 170px;
-    width: 100%;
-    height: 100%;
-    transform: scale(0); 
+    top: 106%;
+    left: 81%;
+    width: 95%;
+    height: 205%;
+    transform: translate(-50%, -50%) scale(0.1); 
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 33px; 
     color: #23233f;
-    font-weight: 535;
+    font-weight: 470;
     margin: 0;
-    letter-spacing: 5px;
+    letter-spacing: 1px; 
     font-stretch: expanded;
 }
 
 h1 sup {
-    font-size: 16px;
+    font-size: 8px; 
     vertical-align: super;
-}
-
-h2 {
-    font-size: 28px;
-    color: #000;
-    margin: 10px 0 20px 0;
 }
 
 p {
     color: #333;
     margin: 0;
-    font-size: 38px;
+    font-size: 18px; 
     letter-spacing: 0px;
 }
 
 p span {
     color: #ff6600;
-    font-size: 38px;
+    font-size: 18px; 
     letter-spacing: 0px;
 }
 
@@ -83,21 +77,22 @@ button {
     background-color: #ec6b29;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 5px 15px; 
     cursor: pointer;
-    font-size: 20px;
-    margin-top: 30px;
-    border-radius: 28px;
+    font-size: 12px; 
+    margin-top: 10px; 
+    border-radius: 14px; 
     position: relative;
     overflow: hidden;
     display: inline-block;
-    width: 191px;
-    height: 56px;
-    transition: transform 0.3s ease; 
+    width: 95px; 
+    height: 28px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .cashback {
@@ -126,22 +121,32 @@ button:hover {
 
 .debit-card {
     position: absolute;
-    bottom: -300px; /* Start from below the container */
-    right: -300px; /* Start from right of the container */
-    height: auto;
-    transform: rotate(45deg); /* Start with a 45 degree rotation */
+    bottom: -150px; 
+    right: -150px; 
+    height: 250px; 
+    transform: rotate(45deg); 
 }
 
-
 .footer-text {
-    font-size: 17px;
-    line-height: 17px;
+    font-size: 8px; 
+    line-height: 8px; 
     color: #23233f;
     font-weight: 250;
     position: absolute;
-    bottom: 20px;
-    left: 30px;
-    width: calc(100% - 80px);
+    bottom: 5px; 
+    left: 15px; 
+    width: calc(100% - 30px);
     text-align: left;
     letter-spacing: -0.5px;
+}
+
+.ad-content {
+    opacity: 0;
+    transform: translateX(100px); 
+}
+
+.ad-content.appear {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
 }
