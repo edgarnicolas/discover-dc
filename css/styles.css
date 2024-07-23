@@ -26,12 +26,12 @@ body {
 
 .ad-container {
     background-color: #ffffff;
-    padding: 12px;
+    padding: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
     position: relative;
-    width: 300px;
-    height: 250px;
+    width: 600px;
+    height: 500px;
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
@@ -39,37 +39,47 @@ body {
 
 .arcs {
     position: absolute;
-    top: 106%;
-    left: 81%;
-    width: 95%;
-    height: 205%;
-    transform: translate(-50%, -50%) scale(0.1); 
+    top: 250px;
+    left: 170px;
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+}
+
+.disappearing-circle {
+    transform-origin: center;
+    transform: scale(1); 
+}
+
+.circle-out {
+    transform-origin: center;
+    transition: scale 1s ease-out;
 }
 
 h1 {
-    font-size: 33px; 
+    font-size: 60px;
     color: #23233f;
-    font-weight: 470;
+    font-weight: 535;
     margin: 0;
-    letter-spacing: 1px; 
+    letter-spacing: 5px;
     font-stretch: expanded;
 }
 
 h1 sup {
-    font-size: 8px; 
+    font-size: 16px;
     vertical-align: super;
 }
 
 p {
     color: #333;
     margin: 0;
-    font-size: 18px; 
+    font-size: 38px;
     letter-spacing: 0px;
 }
 
 p span {
     color: #ff6600;
-    font-size: 18px; 
+    font-size: 38px;
     letter-spacing: 0px;
 }
 
@@ -77,36 +87,26 @@ button {
     background-color: #ec6b29;
     color: white;
     border: none;
-    padding: 5px 15px; 
+    padding: 15px 30px;
     cursor: pointer;
-    font-size: 12px; 
-    margin-top: 10px; 
-    border-radius: 14px; 
+    font-size: 20px;
+    margin-top: 30px;
+    border-radius: 28px;
     position: relative;
     overflow: hidden;
     display: inline-block;
-    width: 95px; 
-    height: 28px; 
+    width: 191px;
+    height: 56px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.2); 
+    transform: scale(1.5); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .cashback {
     display: inline-block;
-    animation: scaleUp 1s ease-in-out infinite alternate;
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(1); 
-    }
-    100% {
-        transform: scale(1.05);
-    }
 }
 
 .button-glare {
@@ -117,36 +117,63 @@ button:hover {
     height: 300%;
     background: rgba(255, 255, 255, 0.5);
     transform: rotate(45deg);
+    filter: blur(30px); 
 }
 
 .debit-card {
     position: absolute;
-    bottom: -150px; 
-    right: -150px; 
-    height: 250px; 
+    bottom: -300px; 
+    right: -300px; 
+    height: auto;
     transform: rotate(45deg); 
 }
 
 .footer-text {
-    font-size: 8px; 
-    line-height: 8px; 
+    font-size: 17px;
+    line-height: 17px;
     color: #23233f;
     font-weight: 250;
     position: absolute;
-    bottom: 5px; 
-    left: 15px; 
-    width: calc(100% - 30px);
+    bottom: 20px;
+    left: 30px;
+    width: calc(100% - 80px);
     text-align: left;
     letter-spacing: -0.5px;
 }
 
 .ad-content {
     opacity: 0;
-    transform: translateX(100px); 
+    transform: translateX(100px);
+    animation: none;
 }
 
-.ad-content.appear {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 1s ease, transform 1s ease;
+.ad-content h1:nth-of-type(1) {
+    animation: fadeIn 1s ease forwards;
+}
+
+.ad-content h1:nth-of-type(2) {
+    animation: fadeIn 1s ease 0.5s forwards;
+}
+
+.ad-content p:nth-of-type(1) {
+    animation: fadeIn 1s ease 0.7s forwards;
+}
+
+.ad-content p:nth-of-type(2) {
+    animation: fadeIn 1s ease 0.9s forwards;
+}
+
+.ad-content button {
+    animation: fadeIn 1s ease 0.9s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
